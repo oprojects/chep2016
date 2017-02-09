@@ -1,31 +1,60 @@
 \documentclass[a4paper]{jpconf}
 \usepackage{graphicx}
 \begin{document}
-\title{Preparing a paper using \LaTeXe\ for publication in \jpcs}
+\title{New Machine Learning Developments in ROOT}
 
-\author{Jacky Mucklow}
+\author{S. V. Gleyzer$^1$, L. Moneta$^2$, Omar A. Zapata$^3$, add your name here $^4$}
 
-\address{Production Editor, \jpcs, \iopp, Dirac House, Temple Back, Bristol BS1~6BE, UK}
-
-\ead{jacky.mucklow@iop.org}
+\address{$^1$ University of Florida}
+\address{$^2$ CERN}
+\address{$^3$ University of Antioquia and Metropolitan Institute of Technology}
+\address{$^4$ add you university}
+\ead{Sergei.Gleyzer@cern.ch, Lorenzo.Moneta@cern.ch, Omar.Zapata@cern.ch, add your email here}
 
 \begin{abstract}
-All articles {\it must} contain an abstract. This document describes the  preparation of a conference paper to be published in \jpcs\ using \LaTeXe\ and the \cls\ class file. The abstract text should be formatted using 10 point font and indented 25 mm from the left margin. Leave 10 mm space after the abstract before you begin the main text of your article. The text of your article should start on the same page as the abstract. The abstract follows the addresses and should give readers concise information about the content of the article and indicate the main results obtained and conclusions drawn. As the abstract is not part of the text it should be complete in itself; no table numbers, figure numbers, references or displayed mathematical expressions should be included. It should be suitable for direct inclusion in abstracting services and should not normally exceed 200 words. The abstract should generally be restricted to a single paragraph. Since contemporary information-retrieval systems rely heavily on the content of titles and abstracts to identify relevant articles in literature searches, great care should be taken in constructing both.
+ROOT provides advanced statistical methods needed by the LHC experiments to analyze their data \cite{Antcheva20092499}. These include machine learning tools for classification, regression and clustering. TMVA, a toolkit for multi-variate analysis in ROOT  \cite{Hocker:2007ht}, provides these machine learning methods.
 \end{abstract}
 
 \section{Introduction}
-These guidelines show how to prepare articles for publication in \jpcs\ using \LaTeX\ so they can be published quickly and accurately. Articles will be refereed by the \corg s but the accepted PDF will be published with no editing, proofreading or changes to layout. It is, therefore, the author's responsibility to ensure that the content and layout are correct.  This document has been prepared using \cls\ so serves as a sample document. The class file and accompanying documentation are available from \verb"http://jpcs.iop.org".
+We will present new developments in TMVA, including parallelisation, deep-learning neural networks, new features and 
+additional interfaces to external machine learning packages. 
+We will show the new modular design of the new version of TMVA, cross-validation and hyper parameter tuning capabilities, feature engineering and deep learning. 
+We will further describe new parallelisation features including multi-threading, multi-processing, cluster parallelisation and present GPU support for intensive machine learning applications, such as deep learning.
 
-\section{Preparing your paper}
-\verb"jpconf" requires \LaTeXe\ and  can be used with other package files such
-as those loading the AMS extension fonts 
-\verb"msam" and \verb"msbm" (these fonts provide the 
-blackboard bold alphabet and various extra maths symbols as well as 
-symbols useful in figure captions); an extra style file \verb"iopams.sty" is 
-provided to load these packages and provide extra definitions for bold Greek letters. 
-\subsection{Headers, footers and page numbers}
-Authors should {\it not} add headers, footers or page numbers to the pages of their article---they will
-be added by \iopp\ as part of the production process.
+
+\section{TMVA Interfaces}
+Interfaces to External ML Tools 
+\begin{itemize}  
+\item RMVA interface to R
+\item PyMVA interface to scikit-learn
+\item KMVA interface to Keras
+\subitem High-level interface to Theano,
+\subitem TensorFlow deep-learning libraries 
+\end{itemize}
+
+\subsection{RMVA interface to R}
+TODO by omar
+\subsection{PyMVA interface to scikit-learn}
+TODO by omar
+\subsection{KMVA interface to Keras}
+TODO by Stefan
+
+\section{Deep learning}
+TODO by Simon
+
+\section{Cross Validation}
+TODO by Thomas
+
+\section{Hyper-parameter tuning}
+TODO by Thomas
+
+\section{New regression features}
+TODO by Andrew
+
+\section{Jupyter Integration}
+TODO by Attila
+
+
 
 \subsection{{\cls\ }package options}
 The \cls\ class file has two options `a4paper' and `letterpaper':
